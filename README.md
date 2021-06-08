@@ -1,0 +1,1 @@
+# stm32412g-discovery
