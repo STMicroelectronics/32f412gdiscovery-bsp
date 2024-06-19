@@ -31,9 +31,7 @@
 
 /* Include TouchScreen component driver */
 #include "../Components/ft6x06/ft6x06.h"
-#if defined (USE_STM32412G_DISCOVERY_REVD)
 #include "../Components/ft3x67/ft3x67.h"
-#endif /* USE_STM32412G_DISCOVERY_REVD */
 /** @addtogroup BSP
   * @{
   */
