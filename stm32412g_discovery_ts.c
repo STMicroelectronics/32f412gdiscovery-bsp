@@ -419,12 +419,16 @@ uint8_t BSP_TS_ResetTouchData(TS_StateTypeDef *TS_State)
   */
 void BSP_TS_Reset(void)
 {
+  /* Msp Init of GPIO used for TS_INT pin coming from TouchScreen driver IC FT6x36 */
+  /* When touchscreen is operated in interrupt mode */
+  BSP_TS_INT_MspInit();
+
   /* TouchScreen IC controller reset sequence */
   HAL_GPIO_WritePin(TS_RST_GPIO_PORT, TS_RST_PIN, GPIO_PIN_RESET);
   HAL_Delay(10);
   HAL_GPIO_WritePin(TS_RST_GPIO_PORT, TS_RST_PIN, GPIO_PIN_SET);
 
-  while (HAL_GPIO_ReadPin(TS_RST_GPIO_PORT , TS_RST_PIN)!= GPIO_PIN_RESET);
+  while (HAL_GPIO_ReadPin(TS_RST_GPIO_PORT , TS_RST_PIN)!= GPIO_PIN_SET);
   while (HAL_GPIO_ReadPin(TS_INT_GPIO_PORT , TS_INT_PIN)!= GPIO_PIN_SET);
 }
 
