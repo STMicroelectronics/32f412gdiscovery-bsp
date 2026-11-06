@@ -50,17 +50,17 @@ typedef struct
   * @{
   */
 /**
- * @brief STM32412G DISCOVERY BSP Driver version number V2.1.0
+ * @brief STM32412G DISCOVERY BSP Driver version number V2.1.1
    */
 #define __STM32412G_DISCOVERY_BSP_VERSION_MAIN   (0x02) /*!< [31:24] main version */
 #define __STM32412G_DISCOVERY_BSP_VERSION_SUB1   (0x01) /*!< [23:16] sub1 version */
-#define __STM32412G_DISCOVERY_BSP_VERSION_SUB2   (0x00) /*!< [15:8]  sub2 version */
+#define __STM32412G_DISCOVERY_BSP_VERSION_SUB2   (0x01) /*!< [15:8]  sub2 version */
 #define __STM32412G_DISCOVERY_BSP_VERSION_RC     (0x00) /*!< [7:0]  release candidate */
 #define __STM32412G_DISCOVERY_BSP_VERSION        ((__STM32412G_DISCOVERY_BSP_VERSION_MAIN << 24)\
                                                  |(__STM32412G_DISCOVERY_BSP_VERSION_SUB1 << 16)\
                                                  |(__STM32412G_DISCOVERY_BSP_VERSION_SUB2 << 8 )\
                                                  |(__STM32412G_DISCOVERY_BSP_VERSION_RC))
-											                                    
+
 /* We use BANK1 as we use FMC_NE1 signal */
 #define FMC_BANK1_BASE  ((uint32_t)(0x60000000 | 0x00000000))  
 #define FMC_BANK3_BASE  ((uint32_t)(0x60000000 | 0x08000000))  

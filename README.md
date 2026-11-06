@@ -1,6 +1,6 @@
 # BSP STM32412G-DISCOVERY Component
 
-![latest tag](https://img.shields.io/github/v/tag/STMicroelectronics/stm32412g-discovery.svg?color=brightgreen)
+![tag](https://img.shields.io/badge/tag-v2.1.1-brightgreen.svg)
 
 ## Overview
 
